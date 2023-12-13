@@ -18,5 +18,5 @@ sudo usermod -aG docker ${USER}
 su - ${USER}
 sudo usermod -aG docker ${USER}
 
-
+echo "alias docker-compose-rebuild='docker-compose rm && docker-compose build --no-cache && docker-compose up -d --force-recreate'" >> ~/.bashrc && source ~/.bashrc
 echo "Docker installation and configuration completed."
