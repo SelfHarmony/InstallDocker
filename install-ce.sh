@@ -12,5 +12,5 @@ sudo apt install -y docker-ce
 # Step 2: Execute Docker command without sudo
 sudo usermod -aG docker ${USER}
 su - ${USER}
-
+echo "alias docker-compose-rebuild='docker-compose rm && docker-compose build --no-cache && docker-compose up -d --force-recreate'" >> ~/.bashrc && source ~/.bashrc
 echo "Docker installation and configuration completed."
